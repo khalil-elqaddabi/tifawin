@@ -36,10 +36,10 @@ class CategoryController extends Controller
             'description' => 'nullable|string',
         ]);
 
-        Category::create([
+        Category::firstorcreate([
             'name' => $request->name,
-            'slug' => str::slug($request->name),
-            'description' => $request->decription,
+            'slug' => Str::slug($request->name),
+            'description' => $request->description,
         ]);
 
         return redirect()->route('categories.index')->with('success', 'succes to create category');
