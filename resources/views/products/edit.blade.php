@@ -5,7 +5,7 @@
     <title>Edit Product</title>
 </head>
 <body>
-  <h1 class="text-2xl mb-4">Edit Product</h1>
+  <h1 class="text-white text-6xl">Edit Product</h1>
 
 <form action="{{ route('products.update', $product->id) }}" method="POST" class="space-y-4">
     @csrf

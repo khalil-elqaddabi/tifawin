@@ -5,14 +5,15 @@
     <title>Add New Product</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-gray-100 p-8">
+<body class="bg-[#30343E]  flex flex-col justify-center items-center gap-2.5">
+            <nav class="bg-black w-full flex flex-col justify-center items-center h-30 mb-7">
 
-    <div class="max-w-2xl mx-auto bg-white p-6 rounded shadow">
-        <h1 class="text-3xl font-bold mb-6">Add New Product</h1>
+    <h1 class="text-white text-6xl">Add New Product</h1>
+            </nav>
 
       
 
-        <form action="{{ route('products.store') }}" method="POST" class="space-y-4">
+        <form class="flex flex-col gap-1 border-2 w-[40%] p-4 rounded-lg bg-[#808DA1]" action="{{ route('products.store') }}" method="POST" >
             @csrf
 
             <div>
@@ -54,7 +55,7 @@
                 Save Product
             </button>
         </form>
-    </div>
+    
 
 </body>
 </html>

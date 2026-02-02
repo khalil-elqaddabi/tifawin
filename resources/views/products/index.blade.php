@@ -11,7 +11,7 @@
     </style>
 </head>
 <body>
-  <h1>Products List</h1>
+  <h1 class="text-white text-6xl">Products List</h1>
 
 <a href="{{ route('products.create') }}" class="mb-3 text-2xl inline-block">
     <u>+ Add product</u>
