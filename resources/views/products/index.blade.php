@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <title>Products List</title>
-    <style>
-        table { width: 100%; border-collapse: collapse; }
-        th, td { border: 1px solid #ccc; padding: 8px; }
-        th { background-color: #eee; }
-        a { margin-right: 5px; }
-    </style>
-</head>
-<body>
-  <h1 class="text-white text-6xl">Products List</h1>
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
+</head>
+<body class="bg-[#30343E]  flex flex-col justify-center items-center gap-2.5">
+                <nav class="bg-black w-full flex flex-col justify-center items-center h-30 mb-7">
+
+  <h1 class="text-white text-6xl">Products List</h1>
+                </nav>
+
+                <div class="flex flex-col gap-1 border-2 w-[90%] p-4 rounded-lg bg-[#808DA1]">
 <a href="{{ route('products.create') }}" class="mb-3 text-2xl inline-block">
     <u>+ Add product</u>
 </a>
@@ -37,17 +37,17 @@
                 <td class="border p-2">{{ number_format($product->price, 2) }} MAD</td>
                 <td class="border p-2">{{ $product->stock }}</td>
                 <td class="border p-2 flex gap-2">
-                    <a href="{{ route('products.show', $product->id) }}" class="text-blue-500">View</a>
-                    <a href="{{ route('products.edit', $product->id) }}" class="text-yellow-500">Edit</a>
+                    <a href="{{ route('products.edit', $product->id) }}" class="text-blue-900">Edit</a>
                     <form action="{{ route('products.destroy', $product->id) }}" method="POST" onsubmit="return confirm('Delete?');">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="text-red-500">Delete</button>
+                        <button type="submit" class="text-red-900">Delete</button>
                     </form>
                 </td>
             </tr>
         @endforeach
     </tbody>
 </table>
+</div>
 </body>
 </html>

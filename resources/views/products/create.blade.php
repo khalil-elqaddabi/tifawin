@@ -15,7 +15,9 @@
 
         <form class="flex flex-col gap-1 border-2 w-[40%] p-4 rounded-lg bg-[#808DA1]" action="{{ route('products.store') }}" method="POST" >
             @csrf
-
+                <a href="{{ route('products.index') }}" class="mb-3 text-2xl inline-block">
+    <u><-- return home</u>
+</a>
             <div>
                 <label class="block font-semibold mb-1">Name</label>
                 <input type="text" name="name" class="border p-2 w-full rounded" required>

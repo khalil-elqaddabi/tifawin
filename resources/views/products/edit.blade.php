@@ -2,14 +2,23 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
     <title>Edit Product</title>
 </head>
-<body>
-  <h1 class="text-white text-6xl">Edit Product</h1>
+<body class="bg-[#30343E]  flex flex-col justify-center items-center gap-2.5">
+        <nav class="bg-black w-full flex flex-col justify-center items-center h-30 mb-7">
 
-<form action="{{ route('products.update', $product->id) }}" method="POST" class="space-y-4">
+  <h1 class="text-white text-6xl">Edit Product</h1>
+        </nav>
+
+<form action="{{ route('products.update', $product->id) }}" method="POST" class="flex flex-col gap-1 border-2 w-100 p-4 rounded-lg bg-[#808DA1]">
     @csrf
     @method('PUT')
+          <a href="{{ route('products.index') }}" class="mb-3 text-2xl inline-block">
+    <u><-- return home</u>
+</a>
+      
 
     <div>
         <label class="block">Name</label>
@@ -37,7 +46,7 @@
         <input type="number" name="stock" class="border p-2 w-full" value="{{ $product->stock }}" required>
     </div>
 
-    <button type="submit" class="bg-green-500 text-white px-4 py-2 rounded">
+    <button type="submit" class="bg-blue-500 text-white px-4 py-2 rounded">
         Update
     </button>
 </form>
