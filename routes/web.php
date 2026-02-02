@@ -12,5 +12,5 @@ Route::resource('categories', CategoryController::class);
 Route::resource('products', ProductController::class);
 
 
-Route::get('/categories', [CategoryController::class, 'index']);
-Route::get('/products', [ProductController::class, 'index']);
+// Route::get('/categories', [CategoryController::class, 'index']);
+// Route::get('/products', [ProductController::class, 'index']);

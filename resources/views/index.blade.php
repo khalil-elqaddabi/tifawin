@@ -13,8 +13,8 @@
         <h1 class="text-white text-6xl">TIFAWIN</h1>
     </nav>
                 <div class="flex  gap-30 mt-7">
-            <a class="bg-[#808DA1] p-4 rounded-2xl" href="{{url('/categories')}}">CATEGORIES</a>
-            <a class="bg-[#808DA1] p-4 rounded-2xl" href="{{url('/products')}}">PRODUCTS</a>
+            <a class="bg-[#808DA1] p-4 rounded-2xl" href="{{ route('categories.index') }}">CATEGORIES</a>
+            <a class="bg-[#808DA1] p-4 rounded-2xl" href="{{ route('products.index') }}">PRODUCTS</a>
             </div>
         
 
